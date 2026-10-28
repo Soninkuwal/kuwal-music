@@ -19,7 +19,7 @@ window.songsDatabase = [
     
     
     
-// Yahan jitne chahe multiple YouTube channel IDs add karein
+// Yahan UC ID ya direct @handle add kar sakte hain
 window.artistChannels = [
   {
     channelId: "UCxcsKK4pCeDNPgsmsQ44SFg", // Kavita Cassette Channel ID
@@ -27,13 +27,13 @@ window.artistChannels = [
     category: "Meena Geet"
   },
   {
-    channelId: "UCf8t2Cj5hT2BvWbZ5J8fCqA", // Vishnu Kuagoan Channel ID
-    artistName: "Vishnu Kuagoan",
+    handle: "@kavitacassette", // Direct @ Handle bhi supported hai
+    artistName: "Kavita Cassette",
     category: "Meena Geet"
   },
   {
-    channelId: "UCq-Fj5jknLsUf-MWSy4_brA", // T-Series / Music Hits Example
-    artistName: "Music Top Hits",
-    category: "Trending Hits"
+    channelId: "UCq-Fj5jknLsUf-MWSy4_brA", // Vishnu Kuagoan Channel ID
+    artistName: "Vishnu Kuagoan",
+    category: "Meena Geet"
   }
 ];
