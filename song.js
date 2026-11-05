@@ -1,13 +1,13 @@
 // song.js - Configuration for Automatic Channel Sync
 window.artistChannels = [
   {
-    channelId: "UCxcsKK4pCeDNPgsmsQ44SFg",
+    channelId: "UCq9H6SNDa_FOZJj7-r9frww", // Kavita Cassette
     artistName: "Kavita Cassette",
-    logo: "", // Blank rakhne par automatically official YouTube logo load ho jayega
+    logo: "", // Blank rakhne par YouTube se auto-fetch hoga
     categories: ["Meena Geet", "Trending Hits", "Rajasthani Hits"]
   },
   {
-    channelId: "UCVfcbEBTVznAli-Xy4QSeIw", // Vishnu Kuagoan Official Channel ID
+    channelId: "UCq-Fj5jknLsUf-MWSy4_brA", // Vishnu Kuagoan
     artistName: "Vishnu Kuagoan",
     logo: "",
     categories: ["Meena Geet", "Desi Folk", "Fresh Hits"]
