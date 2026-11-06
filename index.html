@@ -4,14 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kuwal Music - Listen to Free Music, Hits & Songs Online</title>
-  <link rel="shortcut icon" href="/logo.png">
+  <link rel="shortcut icon" href="logo.png">
   
   <meta name="description" content="Kuwal Music par suniye latest trending songs, top artists, romantic tracks aur fresh hits. Enjoy uninterrupted streaming and online music player.">
   <meta name="keywords" content="Kuwal Music, free songs, online music player, hindi songs, trending music, top artists">
   <meta name="author" content="Kuwal Music">
   <meta name="robots" content="index, follow">
-
-  <meta name="google-site-verification" content="QdHAYEY0JZ2u-BADiuGdbjkjB0rL4kBBsJP1Pc9euJY" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="music.song">
@@ -175,6 +173,122 @@
         filter: drop-shadow(0 2px 5px rgba(255, 23, 68, 0.2));
     }
 
+    @    /* ---------------- FOOTER & ANIMATED LIGHT CSS ---------------- */
+    .footer-rainbow-light-wrapper {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin-top: 35px;
+        margin-bottom: 0.5rem;
+    }
+
+    .animated-rainbow-light {
+        height: 3.5px;
+        width: 100%;
+        background: linear-gradient(
+            90deg,
+            #ff007f,
+            #7928ca,
+            #0070f3,
+            #00dfd8,
+            #43e97b,
+            #ffbf00,
+            #ff007f
+        );
+        background-size: 300% 100%;
+        animation: rainbowLightMove 3.5s linear infinite;
+        box-shadow: 0 0 12px rgba(0, 223, 216, 0.7), 0 0 25px rgba(255, 0, 127, 0.5);
+    }
+
+    .animated-rainbow-text {
+        background: linear-gradient(
+            90deg,
+            #ff3b30,
+            #ff9500,
+            #ffcc00,
+            #34c759,
+            #00c7be,
+            #30b0c7,
+            #007aff,
+            #5856d6,
+            #af52de,
+            #ff2d55,
+            #ff3b30
+        );
+        background-size: 300% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: rainbowTextShift 4s linear infinite;
+        text-decoration: none;
+        display: inline-block;
+        transition: transform 0.2s ease;
+    }
+
+    .animated-rainbow-text:hover {
+        transform: scale(1.04);
+        filter: drop-shadow(0 0 6px rgba(0, 223, 216, 0.6));
+    }
+
+    .live-datetime-badge {
+        font-family: monospace;
+        letter-spacing: 0.5px;
+    }
+
+    .site-footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 16px 20px 24px;
+        color: #334155;
+    }
+
+    .footer-inner-box {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        border-top: 1px solid #e2e8f0;
+        padding-top: 16px;
+    }
+
+    @media (min-width: 640px) {
+        .footer-inner-box {
+            flex-direction: row;
+            text-align: left;
+        }
+    }
+
+    .footer-links-list {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.75rem;
+        color: #64748b;
+        font-weight: 600;
+    }
+
+    .footer-links-list a {
+        text-decoration: none;
+        color: #64748b;
+        transition: color 0.2s ease;
+    }
+
+    .footer-links-list a:hover {
+        color: var(--primary);
+    }
+
+    @keyframes rainbowLightMove {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 300% 50%; }
+    }
+
+    @keyframes rainbowTextShift {
+        0% { background-position: 0% center; }
+        100% { background-position: 300% center; }
+    }
+
     @media (max-width: 480px) {
         .brand span { font-size: 22px; }
         .detail-header-actions { flex-wrap: wrap; justify-content: flex-end; }
@@ -247,6 +361,49 @@
     <h2 style="margin-bottom:14px;">My Playlists</h2>
     <div id="allPlaylistsContainer"></div>
   </div>
+  
+  
+  <!-- FOOTER BOTTOM: COLORFUL ANIMATED COPYRIGHT -->
+  <footer style="width: 100%; margin-top: 25px;">
+    <!-- Colorful Animated Light Top Bar -->
+    <div class="footer-rainbow-light-wrapper">
+        <div class="animated-rainbow-light"></div>
+    </div>
+
+    <div class="site-footer-container">
+        <div class="footer-inner-box">
+            
+            <!-- Copyright & Auto-Updated Year/Date/Time -->
+            <div style="font-size: 0.75rem; font-weight: 600; line-height: 1.6; color: #475569;">
+                <p>
+                    © <span id="footer-current-year" style="color: #0f172a; font-weight: 800;"></span> All Rights Reserved. Designed & Developed by 
+                    <a href="https://kuwal-company.pages.dev" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="animated-rainbow-text"
+                       style="font-weight: 900; font-size: 0.85rem; padding: 0 4px;"
+                       title="Kuwal Company Pvt. Ltd.">
+                        Kuwal Company Pvt. Ltd. Lalsot
+                    </a>
+                </p>
+                <p style="font-size: 0.7rem; color: #64748b; margin-top: 4px;">
+                    Live System Time :- <span id="footer-live-datetime" class="live-datetime-badge" style="color: #0891b2; font-weight: 700;"></span>
+                </p>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="footer-links-list">
+                <a href="#">Privacy Policy</a>
+                <span>•</span>
+                <a href="#">Terms of Service</a>
+                <span>•</span>
+                <a href="#">Support</a>
+            </div>
+        </div>
+    </div>
+  </footer>
+  
+    
 
   <!-- Mini Player (Home Page Play/Pause) -->
   <div class="mini-player" id="miniPlayer" onclick="openPlayerPage()">
@@ -270,7 +427,7 @@
     <div class="nav-item" id="navLibrary" onclick="switchTab('library')"><i class="fa-solid fa-user"></i><span>My Library</span></div>
   </nav>
   
-  <script src="songs.js"></script>
+  <script src="songs1.js"></script>
 
   <script>
     let songsDatabase = window.songsDatabase || []; 
@@ -701,6 +858,45 @@ ${icon} Check out this amazing ${typeLabel}:
         `;
       });
     }
+    
+    
+    
+    
+       // Auto Update Script for Year, Date & Real-time Clock
+    (function () {
+        function updateFooterDateTime() {
+            const now = new Date();
+
+            // Auto-update current year
+            const yearEl = document.getElementById("footer-current-year");
+            if (yearEl) {
+                yearEl.textContent = now.getFullYear();
+            }
+
+            // Auto-update Date and Time (Format: 06 Nov 2026, 06:30:00 AM)
+            const dateTimeEl = document.getElementById("footer-live-datetime");
+            if (dateTimeEl) {
+                const formattedDate = now.toLocaleDateString("en-IN", {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric"
+                });
+
+                const formattedTime = now.toLocaleTimeString("en-IN", {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    second: "2-digit",
+                    hour12: true
+                });
+
+                dateTimeEl.textContent = `${formattedDate} | ${formattedTime}`;
+            }
+        }
+
+        updateFooterDateTime();
+        setInterval(updateFooterDateTime, 1000);
+    })();
+    
 
     window.onload = () => {
       autoFetchYouTubeDetails();
